@@ -1,5 +1,5 @@
 
-[![Build Status](https://travis-ci.org/st4ll1/adfs.svg?branch=master)](https://travis-ci.org/st4ll1/adfs)
+[![Build Status](https://travis-ci.org/CoatiSoftware/eCoati.svg?branch=master)](https://travis-ci.org/CoatiSoftware/eCoati)
 
 #eCoati
 
@@ -7,7 +7,7 @@ eCoati is a plugin for Eclipse to communicate with [Coati](https://coati.io).
 
 ## Install
 
-add the repository address: http://CoatiSoftware.github.com/ecoati/update
+add the repository address: http://CoatiSoftware.github.com/eCoati/updatesite
 
 ## Usage
 
@@ -19,13 +19,25 @@ Right click in coati > Set IDE Curor | Eclipse should now open the file and put 
 
 ### Eclipse to Coati
 
+Navigate your textcursor to the location.
 
+* Click the Coati icon in the toolbar
+* Navigate in the menu **eCoati -> ActivaeToken**
+* Rightclik **eCoati -> Sent Location to Coati**
+* Keybinding (see preferences)
 
 ## Preferences
 
-In Eclipse in the menu Window > Preferences there is a Section for Coati.
+### Ports and Ip
+
+In Eclipse in the menu **Window -> Preferences -> Coati Preferences** there is a Section for Coati.
 You can change the ports and ip.
 Make sure you use the same settings in Coati
+
+### Keyboard shortcut
+
+Keyboard shortcut for to send a location to Coati can be set at **Window -> Preferences -> General -> Keys**
+Bind the ActivateToken command as you like.
 
 ## Building
 

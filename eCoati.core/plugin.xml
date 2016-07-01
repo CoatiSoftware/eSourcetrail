@@ -68,7 +68,7 @@
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
-            class="io.coati.eCoati.preferences.CoatiPreferencePage"
+            class="io.coati.eCoati.core.preferences.CoatiPreferencePage"
             id="io.coati.preferences.CoatiPreferencePage"
             name="Coati Perferences">
       </page>
@@ -76,11 +76,11 @@
    <extension
          point="org.eclipse.core.runtime.preferences">
       <initializer
-            class="io.coati.eCoati.preferences.PreferenceInitializer">
+            class="io.coati.eCoati.core.preferences.PreferenceInitializer">
       </initializer>
    </extension>
    <extension point="org.eclipse.ui.startup">
-     <startup class="io.coati.eCoati.Startup"/>
+     <startup class="io.coati.eCoati.core.Startup"/>
    </extension>
 
 </plugin>

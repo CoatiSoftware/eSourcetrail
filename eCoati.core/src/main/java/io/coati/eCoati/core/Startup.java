@@ -2,7 +2,6 @@ package io.coati.eCoati.core;
 
 import org.eclipse.ui.IStartup;
 import org.eclipse.ui.IWorkbench;
-import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.PlatformUI;
 
 public class Startup implements IStartup {

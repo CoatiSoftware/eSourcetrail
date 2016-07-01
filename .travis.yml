@@ -13,9 +13,9 @@ branches:
   only:
     - master
 after_success:
-    - bash deploy/deploy.sh
+  - bash deploy/deploy.sh
 env:
-    global:
-        - GH_REPO="st4ll1/adfs"
-        - secure: >-
-            yUBFXU6EWeSxCOhQqPyQe3ZBpZYpx7ykEus+/J+d0u1YFWsgWV2eUHMFAijImcmvbhjzwv8ssMCixZsPd85TD4VQ7tpug5osSw0QCuUsg4GuaRy1O/RUy+XcqGnVGRJxI/uypNv6HM62ocF8eTnre4YewTEm4hcZ52ENn2DwRlhM8E0VrQPCXlE53mX+4B6aKo9d9fTeTYnohCD5cLRYVkteau6RfArvWN3B5C+S8YhzMz3nWXYCkrsAX/pXgZFk+KvJMuSw0ocvyZ129fVCdq0+Gqx2svTzFu3/UTJRYhvwHDIW/0Gqqvj5JEsI2fiJbOyo/Je///WabGp8oi8LaroUzIOLzCB/7iTSJsd/V1d2I/hjZjGYMc+htrPvkvpPZydKX2oZb/ony250H6i7R08MS8/G6ffG9XDomWcaiwKunou7n1S9ZkuG7dcWyHgNJy9XY+3SEJ1JjcdMbpG3Kd0j7z5F/eVmrk8IiFEshcBpilDiIc932QJm+R4TOJDlp1HNntrDxdQFdgDEoGEnl8rk4PdOHuXZORWXPVHZLfQZPHqUyS/IdZN/YXele+ihW3aEefJNL8IWTp+br9UsY3hmOqg+St/ec9dBqEW1VAs9yEG1/xE0ywaxK1wVJAZ2OsGweybB1lQI70MkxK4JGwfsnqRZDEhBIC544WwY2cU=
+  global:
+    - GH_REPO="CoatiSoftware/eCoati"
+    - secure: >-
+        RuMs0Zi2xxy3tQrFrTaMmzHYhAu1uRCVl47Uspu+A16cVnOvR27YiMTUMDvp/s9uJXFO4JxLakeVB2DTaGyzhpUcWbTZX84P4pTkLXbN9UHtPY17c3rbCV6bHvzxlhouIqEnwBqyU9swIvhITZF8f9qtE3JhBmFi6POflKAgucWX8GwMbUQcMj0cVLIIQZjO7cN5CLPW/rw+BjcAh/ZR2Y0JCN5OJfeLVCQlE9J3+tizjrZvsd0CJYLWM6vBZ4cFCvqyhQ5VGlZ7ugvpq/63afPbMHXB905YZA+2io33eiznsOYp+g+dYwk26SWSqXiyNVv/GX2tkRTbCIfwRECmnkNZdCbaHerOQciUe9MaOTytXoMYWqyivNO3RRbUgxFj2IPR/KVbcxwMDF4Rvd/hpiRWZ/FYCrRBohrSEHFzthtq4ZMMfWI9JjdjARF8X3kV+80a6Vn8kJpSNc/m2siYW8BIsmERjdyJ88UJNyY8EnjTP6+wAu6nfKopN/hVJ7mwLE37hIlALP6puM+u1n0G7lTCdyU8hjfN35jPGUzf7m8OMhUteWWs2+WZkqXgziEGyEJo3rTWbOq1sUzka91QRUpAD+pjMNaZFQY6whVzCrBlPgmWy/tMkK7X5kcumDkK+hT+5Xmy2fQKrvg9SG7jWOe4uy6dgUK1ocxKtxECIX0=
