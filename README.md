@@ -21,8 +21,6 @@ Right click in coati > Set IDE Curor | Eclipse should now open the file and put 
 
 Navigate your textcursor to the location.
 
-* Click the Coati icon in the toolbar
-* Navigate in the menu **eCoati -> ActivaeToken**
 * Rightclik **eCoati -> Sent Location to Coati**
 * Keybinding (see preferences)
 

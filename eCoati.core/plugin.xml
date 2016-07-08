@@ -24,22 +24,22 @@
 
    <extension
          point="org.eclipse.ui.menus">
-      <menuContribution
-            allPopups="false"
-            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
-         <menu
-               id="io.coati.menu.eCoati.id"
-               label="eCoati">
-            <command
-                  commandId="io.coati.command.ActivateToken.id"
-                  icon="icons/coati_16.png"
-                  id="command.ActivateToken.menu.memonic.id"
-                  mnemonic="S">
-            </command>
-         </menu>
-      </menuContribution>
+      <!--<menuContribution-->
+            <!--allPopups="false"-->
+            <!--locationURI="menu:org.eclipse.ui.main.menu?after=additions">-->
+         <!--<menu-->
+               <!--id="io.coati.menu.eCoati.id"-->
+               <!--label="eCoati">-->
+            <!--<command-->
+                  <!--commandId="io.coati.command.ActivateToken.id"-->
+                  <!--icon="icons/coati_16.png"-->
+                  <!--id="command.ActivateToken.menu.memonic.id"-->
+                  <!--mnemonic="S">-->
+            <!--</command>-->
+         <!--</menu>-->
+      <!--</menuContribution>-->
 	  <menuContribution
-			 locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+			 locationURI="popup:org.eclipse.ui.popup.any">
          <menu
                icon="icons/coati_16.png"
                id="io.coati.popup.eCoati.id"
@@ -48,22 +48,22 @@
                   commandId="io.coati.command.ActivateToken.id"
                   icon="icons/coati_16.png"
                   label="Send Location to Coati"
-                  tooltip="Sent current cursor position to Coati">
+                  tooltip="Send current cursor position to Coati">
             </command>
          </menu>
       </menuContribution>
-      <menuContribution
-            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
-         <toolbar
-               id="toolbar.ActivateToken.id">
-            <command
-                  commandId="io.coati.command.ActivateToken.id"
-                  icon="icons/coati_16.png"
-                  tooltip="Send location to Coati"
-                  id="io.coati.toolbar.ActivateToken.id">
-            </command>
-         </toolbar>
-      </menuContribution>
+      <!--<menuContribution-->
+            <!--locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">-->
+         <!--<toolbar-->
+               <!--id="toolbar.ActivateToken.id">-->
+            <!--<command-->
+                  <!--commandId="io.coati.command.ActivateToken.id"-->
+                  <!--icon="icons/coati_16.png"-->
+                  <!--tooltip="Send location to Coati"-->
+                  <!--id="io.coati.toolbar.ActivateToken.id">-->
+            <!--</command>-->
+         <!--</toolbar>-->
+      <!--</menuContribution>-->
    </extension>
    <extension
          point="org.eclipse.ui.preferencePages">

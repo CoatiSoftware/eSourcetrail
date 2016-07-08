@@ -10,10 +10,10 @@ import org.eclipse.ui.IWorkbench;
 
 /**
  * This class represents a preference page that
- * is contributed to the Preferences dialog. By 
+ * is contributed to the Preferences dialog. By
  * subclassing <samp>FieldEditorPreferencePage</samp>, we
  * can use the field support built into JFace that allows
- * us to create a page that is small and knows how to 
+ * us to create a page that is small and knows how to
  * save, restore and apply itself.
  * <p>
  * This page is used to modify preferences only. They
@@ -29,9 +29,9 @@ public class CoatiPreferencePage
 	public CoatiPreferencePage() {
 		super(GRID);
 		setPreferenceStore(Activator.getDefault().getPreferenceStore());
-		setDescription("A demonstration of a preference page implementation");
+		setDescription("Configure the communication with coati:");
 	}
-	
+
 	/**
 	 * Creates the field editors. Field editors are abstractions of
 	 * the common GUI blocks needed to manipulate various types
@@ -41,18 +41,18 @@ public class CoatiPreferencePage
 	public void createFieldEditors() {
 		addField(
 			new IntegerFieldEditor(
-				PreferenceConstants.P_COATI_TO_ECLIPSE_PORT, 
-				"Port(Coati->Eclipse):", 
+				PreferenceConstants.P_COATI_TO_ECLIPSE_PORT,
+				"Port(Coati->Eclipse):",
 				getFieldEditorParent()));
 		addField(
 			new IntegerFieldEditor(
-				PreferenceConstants.P_ECLIPSE_TO_COATI_PORT, 
-				"Port(Eclipse->Coati):", 
+				PreferenceConstants.P_ECLIPSE_TO_COATI_PORT,
+				"Port(Eclipse->Coati):",
 				getFieldEditorParent()));
 		addField(
 			new StringFieldEditor(
-				PreferenceConstants.P_IP, 
-				"Ip:", 
+				PreferenceConstants.P_IP,
+				"Ip:",
 				getFieldEditorParent()));
 	}
 
@@ -61,5 +61,5 @@ public class CoatiPreferencePage
 	 */
 	public void init(IWorkbench workbench) {
 	}
-	
+
 }
