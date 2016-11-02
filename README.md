@@ -7,7 +7,7 @@ eCoati is a plugin for Eclipse to communicate with [Coati](https://coati.io).
 
 ## Install
 
-add the repository address: http://CoatiSoftware.github.com/eCoati/updatesite
+add the repository address: http://CoatiSoftware.github.io/eCoati/updatesite
 
 ## Usage
 
