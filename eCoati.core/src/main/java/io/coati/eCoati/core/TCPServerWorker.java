@@ -4,29 +4,37 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.BufferedWriter;
+import java.io.OutputStreamWriter;
+
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+import org.eclipse.jface.dialogs.MessageDialog;
 import org.eclipse.jface.preference.IPreferenceStore;
+
 import org.eclipse.core.filesystem.EFS;
 import org.eclipse.core.filesystem.IFileStore;
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Status;
+
 import org.eclipse.swt.custom.StyledText;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Display;
+
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.ide.IDE;
 import org.eclipse.ui.texteditor.ITextEditor;
+
 import io.coati.eCoati.core.preferences.PreferenceConstants;
 
 public class TCPServerWorker extends Thread {
 	private Display display;
-	
+
 	private void logError(String msg, Exception e)
 	{
 		Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, Status.OK, msg, e));
@@ -36,6 +44,31 @@ public class TCPServerWorker extends Thread {
 		Activator.getDefault().getLog().log(new Status(IStatus.WARNING, Activator.PLUGIN_ID, Status.OK, msg, e));
 	}
 	
+	private void sendPing()
+	{
+		String ip = "";
+		Integer port = 0;
+		try
+		{
+			IPreferenceStore store = io.coati.eCoati.core.Activator.getDefault().getPreferenceStore();
+			ip = store.getString(PreferenceConstants.P_IP);
+			port = store.getInt(PreferenceConstants.P_ECLIPSE_TO_COATI_PORT);
+
+			Socket socket = new Socket(ip, port);
+			BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));				       
+	        writer.write("ping>>Eclipse<EOM>");
+	        writer.flush();
+	        socket.close();
+		}
+		catch(Exception e)
+		{
+			String errorMsg = 
+					"No connection to a Coati instance\n\n Make sure Coati is running and the right address is used(" + ip + ":" + port + ")";
+			MessageDialog.openError(null, "CoatiPluginError", errorMsg);
+			e.printStackTrace();
+		}
+	}
+
 	public TCPServerWorker( Display display)
 	{
 		if (display == null)
@@ -55,7 +88,8 @@ public class TCPServerWorker extends Thread {
 			String ip = store.getString(PreferenceConstants.P_IP);
 			int port = store.getInt(PreferenceConstants.P_COATI_TO_ECLIPSE_PORT);
 
-			server = new ServerSocket(port, 5, InetAddress.getByName(ip)); 
+			server = new ServerSocket(port, 5, InetAddress.getByName(ip));
+			sendPing();
 			while(true)
 			{
 				final Socket client = server.accept();
@@ -104,7 +138,7 @@ public class TCPServerWorker extends Thread {
 										throw new PartInitException("part is null");
 									}
 									ITextEditor editor = (ITextEditor) part;
-								
+
 									Object control = part.getAdapter(Control.class);
 									if(control == null)
 									{
@@ -130,8 +164,12 @@ public class TCPServerWorker extends Thread {
 						});
 
 					}
+					if ( split[0].equals("ping") )
+					{
+						sendPing();
+					}
 				}
-				else 
+				else
 				{
 					logWarning("No EOM in the message", null);
 				}
@@ -156,7 +194,7 @@ public class TCPServerWorker extends Thread {
 					logError("Could not close server", e);
 				}
 			}
-			
+
 		}
 	}
 

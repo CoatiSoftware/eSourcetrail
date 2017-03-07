@@ -2,7 +2,7 @@
 <feature
       id="eCoati.feature"
       label="eCoati Feature"
-      version="0.0.1.qualifier">
+      version="0.0.2.qualifier">
 
    <description>
       eCoati allows communication between Eclipse and Coati

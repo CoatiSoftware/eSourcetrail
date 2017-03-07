@@ -4,7 +4,7 @@
   <parent>
     <artifactId>eCoati</artifactId>
     <groupId>io.coati.eCoati</groupId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
   </parent>
   <artifactId>eCoati.feature</artifactId>
   <packaging>eclipse-feature</packaging>
