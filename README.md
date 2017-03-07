@@ -52,3 +52,8 @@ and the m2eclipse-tycho plugin (https://github.com/tesla/m2eclipse-tycho/). Upda
 * m2e stable update site : http://download.eclipse.org/technology/m2e/releases/
 * m2eclipse-tycho dev update site : http://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-tycho/0.7.0/N/0.7.0.201309291400/
 
+## Development
+
+### New Version number
+
+mvn -Dtycho.mode=maven org.eclipse.tycho:tycho-versions-plugin:set-version -DnewVersion=<newVersion>
