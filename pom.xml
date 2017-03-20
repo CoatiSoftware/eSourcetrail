@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>io.coati.eCoati</groupId>
-  <artifactId>eCoati</artifactId>
+  <groupId>io.coati.eSourceTrail</groupId>
+  <artifactId>eSourceTrail</artifactId>
   <version>0.0.2-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <name>eCoati :: parent</name>
-  <description>eCoati parent</description>
+  <name>eSourceTrail :: parent</name>
+  <description>eSourceTrail parent</description>
 
   <prerequisites>
     <maven>3.0</maven>
@@ -138,9 +138,9 @@
     </profile>
   </profiles>
   <modules>
-    <module>eCoati.core</module>
-    <module>eCoati.test</module>
-    <module>eCoati.feature</module>
-    <module>eCoati.site</module>
+    <module>eSourceTrail.core</module>
+    <module>eSourceTrail.test</module>
+    <module>eSourceTrail.feature</module>
+    <module>eSourceTrail.site</module>
   </modules>
 </project>

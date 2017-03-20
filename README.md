@@ -1,13 +1,13 @@
 
-[![Build Status](https://travis-ci.org/CoatiSoftware/eCoati.svg?branch=master)](https://travis-ci.org/CoatiSoftware/eCoati)
+[![Build Status](https://travis-ci.org/CoatiSoftware/eSourceTrail.svg?branch=master)](https://travis-ci.org/CoatiSoftware/eSourceTrail)
 
-#eCoati
+#eSourceTrail
 
-eCoati is a plugin for Eclipse to communicate with [Coati](https://coati.io).
+eSourceTrail is a plugin for Eclipse to communicate with [Coati](https://coati.io).
 
 ## Install
 
-add the repository address: http://CoatiSoftware.github.io/eCoati/updatesite
+add the repository address: http://CoatiSoftware.github.io/eSourceTrail/updatesite
 
 ## Usage
 
@@ -21,7 +21,7 @@ Right click in coati > Set IDE Curor | Eclipse should now open the file and put 
 
 Navigate your textcursor to the location.
 
-* Rightclik **eCoati -> Sent Location to Coati**
+* Rightclik **eSourceTrail -> Sent Location to Coati**
 * Keybinding (see preferences)
 
 ## Preferences

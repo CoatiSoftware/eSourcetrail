@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<site>
-   <feature url="features/eCoati.feature_0.0.0.jar" id="eCoati.feature" version="0.0.0">
-    <category name="eCoati"/>
-   </feature>
-   <feature url="features/eCoati.feature.source_0.0.0.jar" id="eCoati.feature.source" version="0.0.0">
-    <category name="eCoati Developer Resources"/>
-   </feature>
-</site>
