@@ -1,5 +1,6 @@
 
-[![Build Status](https://travis-ci.org/CoatiSoftware/eSourcetrail.svg?branch=master)](https://travis-ci.org/CoatiSoftware/eSourcetrail)
+[![Build
+Status](https://travis-ci.org/CoatiSoftware/eCoati.svg?branch=master)](https://travis-ci.org/CoatiSoftware/eCoati)
 
 #eSourcetrail
 
