@@ -1,5 +1,5 @@
 
-[![Build Status](https://travis-ci.org/SourcetrailSoftware/eSourceTrail.svg?branch=master)](https://travis-ci.org/SourcetrailSoftware/eSourceTrail)
+[![Build Status](https://travis-ci.org/CoatiSoftware/eSourceTrail.svg?branch=master)](https://travis-ci.org/CoatiSoftware/eSourceTrail)
 
 #eSourceTrail
 
@@ -7,7 +7,7 @@ eSourceTrail is a plugin for Eclipse to communicate with [Sourcetrail](https://s
 
 ## Install
 
-add the repository address: http://SourcetrailSoftware.github.io/eSourceTrail/updatesite
+add the repository address: http://CoatiSoftware.github.io/eSourceTrail/updatesite
 
 ## Usage
 
