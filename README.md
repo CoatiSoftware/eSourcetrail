@@ -1,13 +1,13 @@
 
-[![Build Status](https://travis-ci.org/CoatiSoftware/eSourceTrail.svg?branch=master)](https://travis-ci.org/CoatiSoftware/eSourceTrail)
+[![Build Status](https://travis-ci.org/CoatiSoftware/eSourcetrail.svg?branch=master)](https://travis-ci.org/CoatiSoftware/eSourcetrail)
 
-#eSourceTrail
+#eSourcetrail
 
-eSourceTrail is a plugin for Eclipse to communicate with [Sourcetrail](https://sourcetrail.com).
+eSourcetrail is a plugin for Eclipse to communicate with [Sourcetrail](https://Sourcetrail.com).
 
 ## Install
 
-add the repository address: http://CoatiSoftware.github.io/eSourceTrail/updatesite
+add the repository address: http://CoatiSoftware.github.io/eSourcetrail/updatesite
 
 ## Usage
 
@@ -15,13 +15,13 @@ To work with the plugin you need the project open in your workspace.
 
 ### Sourcetrail to Eclipse
 
-Right click in sourcetrail > Set IDE Curor | Eclipse should now open the file and put the cursor in the position form sourcetrail.
+Right click in Sourcetrail > Set IDE Curor | Eclipse should now open the file and put the cursor in the position form Sourcetrail.
 
 ### Eclipse to Sourcetrail
 
 Navigate your textcursor to the location.
 
-* Rightclik **eSourceTrail -> Sent Location to Sourcetrail**
+* Rightclik **eSourcetrail -> Sent Location to Sourcetrail**
 * Keybinding (see preferences)
 
 ## Preferences
