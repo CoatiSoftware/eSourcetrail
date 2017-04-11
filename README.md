@@ -1,40 +1,40 @@
 
-[![Build Status](https://travis-ci.org/CoatiSoftware/eSourceTrail.svg?branch=master)](https://travis-ci.org/CoatiSoftware/eSourceTrail)
+[![Build Status](https://travis-ci.org/SourcetrailSoftware/eSourceTrail.svg?branch=master)](https://travis-ci.org/SourcetrailSoftware/eSourceTrail)
 
 #eSourceTrail
 
-eSourceTrail is a plugin for Eclipse to communicate with [Coati](https://coati.io).
+eSourceTrail is a plugin for Eclipse to communicate with [Sourcetrail](https://sourcetrail.com).
 
 ## Install
 
-add the repository address: http://CoatiSoftware.github.io/eSourceTrail/updatesite
+add the repository address: http://SourcetrailSoftware.github.io/eSourceTrail/updatesite
 
 ## Usage
 
 To work with the plugin you need the project open in your workspace.
 
-### Coati to Eclipse
+### Sourcetrail to Eclipse
 
-Right click in coati > Set IDE Curor | Eclipse should now open the file and put the cursor in the position form coati.
+Right click in sourcetrail > Set IDE Curor | Eclipse should now open the file and put the cursor in the position form sourcetrail.
 
-### Eclipse to Coati
+### Eclipse to Sourcetrail
 
 Navigate your textcursor to the location.
 
-* Rightclik **eSourceTrail -> Sent Location to Coati**
+* Rightclik **eSourceTrail -> Sent Location to Sourcetrail**
 * Keybinding (see preferences)
 
 ## Preferences
 
 ### Ports and Ip
 
-In Eclipse in the menu **Window -> Preferences -> Coati Preferences** there is a Section for Coati.
+In Eclipse in the menu **Window -> Preferences -> Sourcetrail Preferences** there is a Section for Sourcetrail.
 You can change the ports and ip.
-Make sure you use the same settings in Coati
+Make sure you use the same settings in Sourcetrail
 
 ### Keyboard shortcut
 
-Keyboard shortcut for to send a location to Coati can be set at **Window -> Preferences -> General -> Keys**
+Keyboard shortcut for to send a location to Sourcetrail can be set at **Window -> Preferences -> General -> Keys**
 Bind the ActivateToken command as you like.
 
 ## Building
