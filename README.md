@@ -1,42 +1,42 @@
 
-[![Build Status](https://travis-ci.org/CoatiSoftware/eCoati.svg?branch=master)](https://travis-ci.org/CoatiSoftware/eCoati)
+[![Build Status](https://travis-ci.org/CoatiSoftware/eSourcetrail.svg?branch=master)](https://travis-ci.org/CoatiSoftware/eSourcetrail)
 
-#eCoati
+#eSourcetrail
 
-eCoati is a plugin for Eclipse to communicate with [Coati](https://coati.io).
+eSourcetrail is a plugin for Eclipse to communicate with [Sourcetrail](https://sourcetrail.io).
 
 ## Install
 
-add the repository address: http://CoatiSoftware.github.com/eCoati/updatesite
+add the repository address: http://CoatiSoftware.github.com/eSourcetrail/updatesite
 
 ## Usage
 
 To work with the plugin you need the project open in your workspace.
 
-### Coati to Eclipse
+### Sourcetrail to Eclipse
 
-Right click in coati > Set IDE Curor | Eclipse should now open the file and put the cursor in the position form coati.
+Right click in sourcetrail > Set IDE Curor | Eclipse should now open the file and put the cursor in the position form sourcetrail.
 
-### Eclipse to Coati
+### Eclipse to Sourcetrail
 
 Navigate your textcursor to the location.
 
-* Click the Coati icon in the toolbar
-* Navigate in the menu **eCoati -> ActivaeToken**
-* Rightclik **eCoati -> Sent Location to Coati**
+* Click the Sourcetrail icon in the toolbar
+* Navigate in the menu **eSourcetrail -> ActivaeToken**
+* Rightclik **eSourcetrail -> Sent Location to Sourcetrail**
 * Keybinding (see preferences)
 
 ## Preferences
 
 ### Ports and Ip
 
-In Eclipse in the menu **Window -> Preferences -> Coati Preferences** there is a Section for Coati.
+In Eclipse in the menu **Window -> Preferences -> Sourcetrail Preferences** there is a Section for Sourcetrail.
 You can change the ports and ip.
-Make sure you use the same settings in Coati
+Make sure you use the same settings in Sourcetrail
 
 ### Keyboard shortcut
 
-Keyboard shortcut for to send a location to Coati can be set at **Window -> Preferences -> General -> Keys**
+Keyboard shortcut for to send a location to Sourcetrail can be set at **Window -> Preferences -> General -> Keys**
 Bind the ActivateToken command as you like.
 
 ## Building
