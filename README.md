@@ -7,7 +7,7 @@ eSourcetrail is a plugin for Eclipse to communicate with [Sourcetrail](https://s
 
 ## Install
 
-add the repository address: http://CoatiSoftware.github.com/eSourcetrail/updatesite
+add the repository address: http://CoatiSoftware.github.io/eSourcetrail/updatesite
 
 ## Usage
 
