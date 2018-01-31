@@ -1,3 +1,5 @@
+echo "Deploying now..."
+
 rm updatesite/* -rf
 mkdir updatesite
 
@@ -14,5 +16,7 @@ git reset upstream/gh-pages
 git add -A updatesite
 git commit -m "Deploy p2 Updatesite"
 git push -q upstream HEAD:gh-pages
+
+echo "Deployment done!"
 
 
