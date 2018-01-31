@@ -57,7 +57,7 @@ public class ActivateToken extends AbstractHandler {
 			
 			if (path  == null)
 			{
-				MessageDialog.openError(window.getShell(), "CoatiPluginError", "File is not in your Project");
+				MessageDialog.openError(window.getShell(), "SourcetrailPluginError", "File is not in your Project");
 				return null;
 			}
 
@@ -79,7 +79,7 @@ public class ActivateToken extends AbstractHandler {
 			{
 				IPreferenceStore store = io.coati.eSourcetrail.core.Activator.getDefault().getPreferenceStore();
 				ip = store.getString(PreferenceConstants.P_IP);
-				port = store.getInt(PreferenceConstants.P_ECLIPSE_TO_COATI_PORT);
+				port = store.getInt(PreferenceConstants.P_ECLIPSE_TO_SOURCETRAIL_PORT);
 
 				Socket socket = new Socket(ip, port);
 				BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
@@ -92,8 +92,8 @@ public class ActivateToken extends AbstractHandler {
 			catch(Exception e)
 			{
 				String errorMsg = 
-						"No connection to a Coati instance\n\n Make sure Coati is running and the right address is used(" + ip + ":" + port + ")";
-				MessageDialog.openError(window.getShell(), "CoatiPluginError", errorMsg);
+						"No connection to a Sourcetrail instance\n\n Make sure Sourcetrail is running and the right address is used(" + ip + ":" + port + ")";
+				MessageDialog.openError(window.getShell(), "SourcetrailPluginError", errorMsg);
 				e.printStackTrace();
 			}
 			

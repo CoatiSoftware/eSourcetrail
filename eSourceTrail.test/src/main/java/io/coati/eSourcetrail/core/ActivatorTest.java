@@ -12,6 +12,6 @@ public class ActivatorTest {
 
 	@Test
 	public void veryStupidTest() {
-		assertEquals("io.coati.eSourceTrail",Activator.PLUGIN_ID);
+		assertEquals("io.coati.eSourcetrail",Activator.PLUGIN_ID);
 	}
 }

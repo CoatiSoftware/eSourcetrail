@@ -28,7 +28,7 @@ public class SampleHandler extends AbstractHandler {
      */
     @Override
     public Object execute(ExecutionEvent event) throws ExecutionException {
-        MessageDialog.openInformation(window.getShell(), "Eclipse Plugin Archetype", "Hello, Maven+Eclipse world,\n eSourceTrail is built with Tycho");
+        MessageDialog.openInformation(window.getShell(), "Eclipse Plugin Archetype", "Hello, Maven+Eclipse world,\n eSourcetrail is built with Tycho");
         return null;
     }
 

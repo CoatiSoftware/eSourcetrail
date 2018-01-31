@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: eSourceTrail Core Plugin
-Bundle-SymbolicName: eSourceTrail.core;singleton:=true
+Bundle-Name: eSourcetrail Core Plugin
+Bundle-SymbolicName: eSourcetrail.core;singleton:=true
 Bundle-Version: 0.0.2.qualifier
-Bundle-Activator: io.coati.eSourceTrail.core.Activator
+Bundle-Activator: io.coati.eSourcetrail.core.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.eclipse.ui.editors,

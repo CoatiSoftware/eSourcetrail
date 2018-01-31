@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="eSourceTrail.feature"
-      label="eSourceTrail Feature"
+      id="eSourcetrail.feature"
+      label="eSourcetrail Feature"
       version="0.0.2.qualifier">
 
    <description>
-      eSourceTrail allows communication between Eclipse and Coati
+      eSourcetrail allows communication between Eclipse and Sourcetrail
    </description>
 
    <license url="">
@@ -20,13 +20,13 @@ THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRES
    </license>
 
    <url>
-      <update label="eSourceTrail Update Site" url="https://CoatiSoftware.github.io/eSourceTrail/updatesite"/>
-      <discovery label="Coati Website" url="https://coati.io`"/>
-      <discovery label="eSourceTrail Github repository" url="https://github.com/CoatiSoftware/eSourceTrail"/>
+      <update label="eSourcetrail Update Site" url="https://CoatiSoftware.github.io/eSourcetrail/updatesite"/>
+      <discovery label="Sourcetrail Website" url="https://sourcetrail.com`"/>
+      <discovery label="eSourcetrail Github repository" url="https://github.com/CoatiSoftware/eSourcetrail"/>
    </url>
 
    <plugin
-         id="eSourceTrail.core"
+         id="eSourcetrail.core"
          download-size="0"
          install-size="0"
          version="0.0.0"

@@ -22,14 +22,14 @@ import org.eclipse.ui.IWorkbench;
  * be accessed directly via the preference store.
  */
 
-public class CoatiPreferencePage
+public class SourcetrailPreferencePage
 	extends FieldEditorPreferencePage
 	implements IWorkbenchPreferencePage {
 
-	public CoatiPreferencePage() {
+	public SourcetrailPreferencePage() {
 		super(GRID);
 		setPreferenceStore(Activator.getDefault().getPreferenceStore());
-		setDescription("Configure the communication with coati:");
+		setDescription("Configure the communication with Sourcetrail:");
 	}
 
 	/**
@@ -41,13 +41,13 @@ public class CoatiPreferencePage
 	public void createFieldEditors() {
 		addField(
 			new IntegerFieldEditor(
-				PreferenceConstants.P_COATI_TO_ECLIPSE_PORT,
-				"Port(Coati->Eclipse):",
+				PreferenceConstants.P_SOURCETRAIL_TO_ECLIPSE_PORT,
+				"Port(Sourcetrail->Eclipse):",
 				getFieldEditorParent()));
 		addField(
 			new IntegerFieldEditor(
-				PreferenceConstants.P_ECLIPSE_TO_COATI_PORT,
-				"Port(Eclipse->Coati):",
+				PreferenceConstants.P_ECLIPSE_TO_SOURCETRAIL_PORT,
+				"Port(Eclipse->Sourcetrail):",
 				getFieldEditorParent()));
 		addField(
 			new StringFieldEditor(

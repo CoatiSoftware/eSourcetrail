@@ -18,12 +18,8 @@ public class PreferenceInitializer extends AbstractPreferenceInitializer {
 	 */
 	public void initializeDefaultPreferences() {
 		IPreferenceStore store = Activator.getDefault().getPreferenceStore();
-		store.setDefault(PreferenceConstants.P_BOOLEAN, true);
-		store.setDefault(PreferenceConstants.P_CHOICE, "choice2");
-		store.setDefault(PreferenceConstants.P_STRING,
-				"Default value");
-		store.setDefault(PreferenceConstants.P_COATI_TO_ECLIPSE_PORT, 6666);
-		store.setDefault(PreferenceConstants.P_ECLIPSE_TO_COATI_PORT, 6667);
+		store.setDefault(PreferenceConstants.P_SOURCETRAIL_TO_ECLIPSE_PORT, 6666);
+		store.setDefault(PreferenceConstants.P_ECLIPSE_TO_SOURCETRAIL_PORT, 6667);
 		store.setDefault(PreferenceConstants.P_IP, "localhost");
 	}
 

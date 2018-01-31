@@ -4,12 +4,12 @@
    <extension
          point="org.eclipse.ui.commands">
       <category
-            name="eSourceTrail category"
-            id="io.coati.category.eSourceTrail.id">
+            name="eSourcetrail category"
+            id="io.coati.category.eSourcetrail.id">
       </category>
       <command
             name="ActivateToken"
-            categoryId="io.coati.category.eSourceTrail.id"
+            categoryId="io.coati.category.eSourcetrail.id"
             id="io.coati.command.ActivateToken.id">
       </command>
    </extension>
@@ -18,7 +18,7 @@
          point="org.eclipse.ui.handlers">
       <handler
             commandId="io.coati.command.ActivateToken.id"
-            class="io.coati.eSourceTrail.core.handlers.ActivateToken">
+            class="io.coati.eSourcetrail.core.handlers.ActivateToken">
       </handler>
    </extension>
 
@@ -28,8 +28,8 @@
             <!--allPopups="false"-->
             <!--locationURI="menu:org.eclipse.ui.main.menu?after=additions">-->
          <!--<menu-->
-               <!--id="io.coati.menu.eSourceTrail.id"-->
-               <!--label="eSourceTrail">-->
+               <!--id="io.coati.menu.eSourcetrail.id"-->
+               <!--label="eSourcetrail">-->
             <!--<command-->
                   <!--commandId="io.coati.command.ActivateToken.id"-->
                   <!--icon="icons/coati_16.png"-->
@@ -42,8 +42,8 @@
 			 locationURI="popup:org.eclipse.ui.popup.any">
          <menu
                icon="icons/coati_16.png"
-               id="io.coati.popup.eSourceTrail.id"
-               label="eSourceTrail">
+               id="io.coati.popup.eSourcetrail.id"
+               label="eSourcetrail">
             <command
                   commandId="io.coati.command.ActivateToken.id"
                   icon="icons/coati_16.png"
@@ -68,19 +68,19 @@
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
-            class="io.coati.eSourceTrail.core.preferences.CoatiPreferencePage"
-            id="io.coati.preferences.CoatiPreferencePage"
-            name="Coati Perferences">
+            class="io.coati.eSourcetrail.core.preferences.SourcetrailPreferencePage"
+            id="io.coati.preferences.SourcetrailPreferencePage"
+            name="Sourcetrail Perferences">
       </page>
    </extension>
    <extension
          point="org.eclipse.core.runtime.preferences">
       <initializer
-            class="io.coati.eSourceTrail.core.preferences.PreferenceInitializer">
+            class="io.coati.eSourcetrail.core.preferences.PreferenceInitializer">
       </initializer>
    </extension>
    <extension point="org.eclipse.ui.startup">
-     <startup class="io.coati.eSourceTrail.core.Startup"/>
+     <startup class="io.coati.eSourcetrail.core.Startup"/>
    </extension>
 
 </plugin>
