@@ -9,11 +9,11 @@ install:
   - mvn clean install -DskipTests
 script:
   - mvn verify --fail-at-end -DskipTests
-branches:
-  only:
-    - master
-after_success:
-  - bash deploy/deploy.sh
+deploy:
+    provider: script
+    script: deploy/deploy.sh
+    on:
+        branch: master
 env:
   global:
     - GH_REPO="CoatiSoftware/eSourceTrail"
