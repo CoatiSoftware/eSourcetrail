@@ -1,4 +1,4 @@
-package io.coati.eSourceTrail.core;
+package io.coati.eSourcetrail.core;
 
 import static org.junit.Assert.assertEquals;
 

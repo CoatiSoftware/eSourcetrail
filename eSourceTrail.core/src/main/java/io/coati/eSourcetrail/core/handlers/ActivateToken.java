@@ -1,4 +1,4 @@
-package io.coati.eSourceTrail.core.handlers;
+package io.coati.eSourcetrail.core.handlers;
 
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
@@ -14,7 +14,7 @@ import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.ide.ResourceUtil;
 import org.eclipse.ui.texteditor.AbstractTextEditor;
 
-import io.coati.eSourceTrail.core.preferences.PreferenceConstants;
+import io.coati.eSourcetrail.core.preferences.PreferenceConstants;
 
 import org.eclipse.swt.custom.StyledText;
 import org.eclipse.swt.widgets.Control;
@@ -43,7 +43,7 @@ public class ActivateToken extends AbstractHandler {
 	public Object execute(ExecutionEvent event) throws ExecutionException {
 		IWorkbenchWindow window = HandlerUtil.getActiveWorkbenchWindowChecked(event);
 		
-		IEditorPart editorPart = io.coati.eSourceTrail.core.Activator.getDefault().getWorkbench()
+		IEditorPart editorPart = io.coati.eSourcetrail.core.Activator.getDefault().getWorkbench()
 				.getActiveWorkbenchWindow().getActivePage().getActiveEditor();
 
 		if (editorPart instanceof AbstractTextEditor)
@@ -77,7 +77,7 @@ public class ActivateToken extends AbstractHandler {
 			Integer port = 0;
 			try
 			{
-				IPreferenceStore store = io.coati.eSourceTrail.core.Activator.getDefault().getPreferenceStore();
+				IPreferenceStore store = io.coati.eSourcetrail.core.Activator.getDefault().getPreferenceStore();
 				ip = store.getString(PreferenceConstants.P_IP);
 				port = store.getInt(PreferenceConstants.P_ECLIPSE_TO_COATI_PORT);
 

@@ -1,10 +1,10 @@
-package io.coati.eSourceTrail.core.preferences;
+package io.coati.eSourcetrail.core.preferences;
 
 import org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer;
 import org.eclipse.jface.preference.IPreferenceStore;
 
-import io.coati.eSourceTrail.core.Activator;
-import io.coati.eSourceTrail.core.preferences.PreferenceConstants;
+import io.coati.eSourcetrail.core.Activator;
+import io.coati.eSourcetrail.core.preferences.PreferenceConstants;
 
 /**
  * Class used to initialize default preference values.

@@ -1,4 +1,4 @@
-package io.coati.eSourceTrail.core;
+package io.coati.eSourcetrail.core;
 
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.ui.plugin.AbstractUIPlugin;

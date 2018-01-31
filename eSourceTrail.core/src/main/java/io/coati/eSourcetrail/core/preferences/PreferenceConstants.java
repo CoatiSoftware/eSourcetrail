@@ -1,4 +1,4 @@
-package io.coati.eSourceTrail.core.preferences;
+package io.coati.eSourcetrail.core.preferences;
 
 /**
  * Constant definitions for plug-in preferences

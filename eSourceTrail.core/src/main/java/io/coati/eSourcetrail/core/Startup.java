@@ -1,4 +1,4 @@
-package io.coati.eSourceTrail.core;
+package io.coati.eSourcetrail.core;
 
 import org.eclipse.ui.IStartup;
 import org.eclipse.ui.IWorkbench;

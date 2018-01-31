@@ -1,4 +1,4 @@
-package io.coati.eSourceTrail.core;
+package io.coati.eSourcetrail.core;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -30,7 +30,7 @@ import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.ide.IDE;
 import org.eclipse.ui.texteditor.ITextEditor;
 
-import io.coati.eSourceTrail.core.preferences.PreferenceConstants;
+import io.coati.eSourcetrail.core.preferences.PreferenceConstants;
 
 public class TCPServerWorker extends Thread {
 	private Display display;
@@ -50,7 +50,7 @@ public class TCPServerWorker extends Thread {
 		Integer port = 0;
 		try
 		{
-			IPreferenceStore store = io.coati.eSourceTrail.core.Activator.getDefault().getPreferenceStore();
+			IPreferenceStore store = io.coati.eSourcetrail.core.Activator.getDefault().getPreferenceStore();
 			ip = store.getString(PreferenceConstants.P_IP);
 			port = store.getInt(PreferenceConstants.P_ECLIPSE_TO_COATI_PORT);
 
@@ -84,7 +84,7 @@ public class TCPServerWorker extends Thread {
 		ServerSocket server = null;
 		try
 		{
-			IPreferenceStore store = io.coati.eSourceTrail.core.Activator.getDefault().getPreferenceStore();
+			IPreferenceStore store = io.coati.eSourcetrail.core.Activator.getDefault().getPreferenceStore();
 			String ip = store.getString(PreferenceConstants.P_IP);
 			int port = store.getInt(PreferenceConstants.P_COATI_TO_ECLIPSE_PORT);
 

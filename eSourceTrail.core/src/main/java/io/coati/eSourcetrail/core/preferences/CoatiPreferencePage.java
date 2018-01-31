@@ -1,10 +1,10 @@
-package io.coati.eSourceTrail.core.preferences;
+package io.coati.eSourcetrail.core.preferences;
 
 import org.eclipse.jface.preference.*;
 import org.eclipse.ui.IWorkbenchPreferencePage;
 
-import io.coati.eSourceTrail.core.Activator;
-import io.coati.eSourceTrail.core.preferences.PreferenceConstants;
+import io.coati.eSourcetrail.core.Activator;
+import io.coati.eSourcetrail.core.preferences.PreferenceConstants;
 
 import org.eclipse.ui.IWorkbench;
 
