@@ -7,7 +7,7 @@ then
 	rm updatesite/* -rf
 	mkdir updatesite
 
-	cp -r eSourceTrail.site/target/repository/* updatesite/
+	cp -r eSourcetrail.site/target/repository/* updatesite/
 	cp deploy/index.html updatesite/
 
 	# config

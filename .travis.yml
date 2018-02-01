@@ -13,6 +13,6 @@ after_success:
   - bash deploy/deploy.sh
 env:
   global:
-    - GH_REPO="CoatiSoftware/eSourceTrail"
+    - GH_REPO="CoatiSoftware/eSourcetrail"
     - secure: >-
         f9N/vQs2zAstGWELNTzLxFjUGjpix9Csnyl+XIygN6uL3U7gQM6CrPpBgeWdEUsg2ddb1t2AO7oYZnrKwATs4/pSM7zbGjE0fYhZL/1++gVjZNH9+/qAGDncybSEKTOxcxv8DYs7FY7+LfBXxCYiMB9bwUSGJn3XXYHqdzBDXzmroNWQF3CEQFuBbYhkf7vZLIPY95SILpXcYYTSdpj8e0o5btJJDsZiNBSYFsZ48ybNQeRfzI8nebDup0UFTW5blYh/YvNu78RutfT+wSFQmytmUyQvnpU+/oT6SXbV16DD6OgaALjgWBrcJlxBEBpqE6fJnExgQ7RnRswJ7XhSZ7v6N9g5BRYPuIHZeHmOBa78EfBKvnKzXWx/pdvH3r1Mg4+zfLsC991+0P3GF1WGLI9IVBLbJxCao1cU15/UJHfkTm11UHTISFgRY+jdmgnY3wwuZa3wUk2a2RGZCjK8mHJcY1TtlCUJK5o8NtwBNRCuq3vb/9gZpBTKyLyoBckSTXU2hYmdu+MXYsGwtTwhbxnGX1sL6m81DkY+AWoBlL0D7WNTqfBZEz0XLXuqWJDChKbL+qsvKQfMPAU4yFOyoeImXBoVK0fVGPMkiowN3VCeQV7ie0fq8VPaFY3zNYIgB6Uem4vMK5vG4KIvWRgr9K6amJyR0FA9Vf1OJVLku68=

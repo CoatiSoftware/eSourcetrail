@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/eSourcetrail.feature_0.0.0.jar" id="eSourcetrail.feature" version="0.0.0">
+    <category name="eSourcetrail"/>
+   </feature>
+   <feature url="features/eSourcetrail.feature.source_0.0.0.jar" id="eSourcetrail.feature.source" version="0.0.0">
+    <category name="eSourcetrail Developer Resources"/>
+   </feature>
+</site>
