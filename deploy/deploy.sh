@@ -1,6 +1,7 @@
 #!/bin/bash
 
-if [[ $TRAVIS_BRANCH == 'master' ]]
+if [[ $TRAVIS_PULL_REQUEST == "false" ]] && [[ $TRAVIS_BRANCH == "master" ]]
+then
 	echo "Deploying now."
 	
 	rm updatesite/* -rf
