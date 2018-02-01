@@ -9,9 +9,6 @@ install:
   - mvn clean install -DskipTests
 script:
   - mvn verify --fail-at-end -DskipTests
-branches:
-  only:
-    - master
 after_success:
   - bash deploy/deploy.sh
 env:
