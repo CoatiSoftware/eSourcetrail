@@ -1,6 +1,8 @@
 #!/bin/bash
 
 if [[ $TRAVIS_BRANCH == 'master' ]]
+	echo "Deploying now."
+	
 	rm updatesite/* -rf
 	mkdir updatesite
 
@@ -17,6 +19,8 @@ if [[ $TRAVIS_BRANCH == 'master' ]]
 	git add -A updatesite
 	git commit -m "Deploy p2 Updatesite"
 	git push -q upstream HEAD:gh-pages
+else
+	echo "Not deploying this branch."
 fi
 
 
