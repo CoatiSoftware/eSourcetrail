@@ -63,7 +63,14 @@ public class TCPServerWorker extends Thread {
 		{
 			String errorMsg = 
 					"No connection to a Sourcetrail instance\n\n Make sure Sourcetrail is running and the right address is used(" + ip + ":" + port + ")";
-			MessageDialog.openError(null, "SourcetrailPluginError", errorMsg);
+			display.asyncExec(new Runnable()
+			{
+				@Override
+				public void run() {
+					MessageDialog.openError(null, "SourcetrailPluginError", errorMsg);
+				}
+			});
+
 			e.printStackTrace();
 		}
 	}
