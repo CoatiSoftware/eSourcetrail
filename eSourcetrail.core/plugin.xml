@@ -47,8 +47,8 @@
             <command
                   commandId="io.coati.command.ActivateToken.id"
                   icon="icons/coati_16.png"
-                  label="Send Location to Coati"
-                  tooltip="Send current cursor position to Coati">
+                  label="Send Location to Sourcetrail"
+                  tooltip="Send current cursor position to Sourcetrail">
             </command>
          </menu>
       </menuContribution>
@@ -59,7 +59,7 @@
             <!--<command-->
                   <!--commandId="io.coati.command.ActivateToken.id"-->
                   <!--icon="icons/coati_16.png"-->
-                  <!--tooltip="Send location to Coati"-->
+                  <!--tooltip="Send location to Sourcetrail"-->
                   <!--id="io.coati.toolbar.ActivateToken.id">-->
             <!--</command>-->
          <!--</toolbar>-->
