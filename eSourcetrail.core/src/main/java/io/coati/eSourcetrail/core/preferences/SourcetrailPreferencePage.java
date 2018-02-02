@@ -49,11 +49,6 @@ public class SourcetrailPreferencePage
 				PreferenceConstants.P_ECLIPSE_TO_SOURCETRAIL_PORT,
 				"Port(Eclipse->Sourcetrail):",
 				getFieldEditorParent()));
-		addField(
-			new StringFieldEditor(
-				PreferenceConstants.P_IP,
-				"Ip:",
-				getFieldEditorParent()));
 	}
 
 	/* (non-Javadoc)

@@ -20,7 +20,6 @@ public class PreferenceInitializer extends AbstractPreferenceInitializer {
 		IPreferenceStore store = Activator.getDefault().getPreferenceStore();
 		store.setDefault(PreferenceConstants.P_SOURCETRAIL_TO_ECLIPSE_PORT, 6666);
 		store.setDefault(PreferenceConstants.P_ECLIPSE_TO_SOURCETRAIL_PORT, 6667);
-		store.setDefault(PreferenceConstants.P_IP, "localhost");
 	}
 
 }
