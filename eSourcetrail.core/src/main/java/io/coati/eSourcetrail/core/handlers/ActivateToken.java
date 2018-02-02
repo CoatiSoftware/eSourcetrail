@@ -73,12 +73,11 @@ public class ActivateToken extends AbstractHandler {
 				row += 1;
 			}
 
-			String ip = "";
+			String ip = "localhost";
 			Integer port = 0;
 			try
 			{
 				IPreferenceStore store = io.coati.eSourcetrail.core.Activator.getDefault().getPreferenceStore();
-				ip = store.getString(PreferenceConstants.P_IP);
 				port = store.getInt(PreferenceConstants.P_ECLIPSE_TO_SOURCETRAIL_PORT);
 
 				Socket socket = new Socket(ip, port);

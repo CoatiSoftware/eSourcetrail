@@ -46,12 +46,11 @@ public class TCPServerWorker extends Thread {
 	
 	private void sendPing()
 	{
-		String ip = "";
+		String ip = "localhost";
 		Integer port = 0;
 		try
 		{
 			IPreferenceStore store = io.coati.eSourcetrail.core.Activator.getDefault().getPreferenceStore();
-			ip = store.getString(PreferenceConstants.P_IP);
 			port = store.getInt(PreferenceConstants.P_ECLIPSE_TO_SOURCETRAIL_PORT);
 
 			Socket socket = new Socket(ip, port);
@@ -85,7 +84,7 @@ public class TCPServerWorker extends Thread {
 		try
 		{
 			IPreferenceStore store = io.coati.eSourcetrail.core.Activator.getDefault().getPreferenceStore();
-			String ip = store.getString(PreferenceConstants.P_IP);
+			String ip = "localhost";
 			int port = store.getInt(PreferenceConstants.P_SOURCETRAIL_TO_ECLIPSE_PORT);
 
 			server = new ServerSocket(port, 5, InetAddress.getByName(ip));

@@ -8,7 +8,4 @@ public class PreferenceConstants {
 	public static final String P_SOURCETRAIL_TO_ECLIPSE_PORT = "coatiToEclipsePort";
 
 	public static final String P_ECLIPSE_TO_SOURCETRAIL_PORT = "eclipseToCoatiPort";
-	
-	public static final String P_IP = "coatiIp";;
-	
 }
