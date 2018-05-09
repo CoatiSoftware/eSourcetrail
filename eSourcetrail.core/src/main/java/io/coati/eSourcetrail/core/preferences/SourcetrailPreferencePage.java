@@ -56,5 +56,4 @@ public class SourcetrailPreferencePage
 	 */
 	public void init(IWorkbench workbench) {
 	}
-
 }

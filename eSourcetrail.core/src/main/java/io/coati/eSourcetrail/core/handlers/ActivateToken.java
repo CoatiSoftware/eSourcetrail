@@ -46,8 +46,7 @@ public class ActivateToken extends AbstractHandler {
 		IEditorPart editorPart = io.coati.eSourcetrail.core.Activator.getDefault().getWorkbench()
 				.getActiveWorkbenchWindow().getActivePage().getActiveEditor();
 
-		if (editorPart instanceof AbstractTextEditor)
-		{
+		if (editorPart instanceof AbstractTextEditor) {
 			int row = 0;
 			int col = 0;
 
@@ -55,8 +54,7 @@ public class ActivateToken extends AbstractHandler {
 			IResource resource = ResourceUtil.getResource(input);
 			IPath path = resource.getRawLocation();
 			
-			if (path  == null)
-			{
+			if (path  == null) {
 				MessageDialog.openError(window.getShell(), "SourcetrailPluginError", "File is not in your Project");
 				return null;
 			}
@@ -75,8 +73,7 @@ public class ActivateToken extends AbstractHandler {
 
 			String ip = "localhost";
 			Integer port = 0;
-			try
-			{
+			try {
 				IPreferenceStore store = io.coati.eSourcetrail.core.Activator.getDefault().getPreferenceStore();
 				port = store.getInt(PreferenceConstants.P_ECLIPSE_TO_SOURCETRAIL_PORT);
 
@@ -87,15 +84,12 @@ public class ActivateToken extends AbstractHandler {
 		        writer.write(text);
 		        writer.flush();
 		        socket.close();
-			}
-			catch(Exception e)
-			{
+			} catch(Exception e) {
 				String errorMsg = 
 						"No connection to a Sourcetrail instance\n\n Make sure Sourcetrail is running and the right address is used(" + ip + ":" + port + ")";
 				MessageDialog.openError(window.getShell(), "SourcetrailPluginError", errorMsg);
 				e.printStackTrace();
 			}
-			
 		}
 		return null;
 	}

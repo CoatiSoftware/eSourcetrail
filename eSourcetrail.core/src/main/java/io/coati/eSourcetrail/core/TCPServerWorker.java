@@ -35,21 +35,17 @@ import io.coati.eSourcetrail.core.preferences.PreferenceConstants;
 public class TCPServerWorker extends Thread {
 	private Display display;
 
-	private void logError(String msg, Exception e)
-	{
+	private void logError(String msg, Exception e) {
 		Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, Status.OK, msg, e));
 	}
-	private void logWarning(String msg, Exception e )
-	{
+	private void logWarning(String msg, Exception e ) {
 		Activator.getDefault().getLog().log(new Status(IStatus.WARNING, Activator.PLUGIN_ID, Status.OK, msg, e));
 	}
 	
-	private void sendPing()
-	{
+	private void sendPing() {
 		String ip = "localhost";
 		Integer port = 0;
-		try
-		{
+		try {
 			IPreferenceStore store = io.coati.eSourcetrail.core.Activator.getDefault().getPreferenceStore();
 			port = store.getInt(PreferenceConstants.P_ECLIPSE_TO_SOURCETRAIL_PORT);
 
@@ -58,13 +54,10 @@ public class TCPServerWorker extends Thread {
 	        writer.write("ping>>Eclipse<EOM>");
 	        writer.flush();
 	        socket.close();
-		}
-		catch(Exception e)
-		{
+		} catch (Exception e) {
 			String errorMsg = 
 					"No connection to a Sourcetrail instance\n\n Make sure Sourcetrail is running and the right address is used(" + ip + ":" + port + ")";
-			display.asyncExec(new Runnable()
-			{
+			display.asyncExec(new Runnable() {
 				@Override
 				public void run() {
 					MessageDialog.openError(null, "SourcetrailPluginError", errorMsg);
@@ -75,79 +68,64 @@ public class TCPServerWorker extends Thread {
 		}
 	}
 
-	public TCPServerWorker( Display display)
-	{
-		if (display == null)
-		{
+	public TCPServerWorker( Display display) {
+		if (display == null) {
 			System.out.println("display null");
 		}
 		this.display = display;
 	}
 
 	@Override
-	public void run()
-	{
+	public void run() {
 		ServerSocket server = null;
-		try
-		{
+		try {
 			IPreferenceStore store = io.coati.eSourcetrail.core.Activator.getDefault().getPreferenceStore();
 			String ip = "localhost";
 			int port = store.getInt(PreferenceConstants.P_SOURCETRAIL_TO_ECLIPSE_PORT);
 
 			server = new ServerSocket(port, 5, InetAddress.getByName(ip));
 			sendPing();
-			while(true)
-			{
+			while (true) {
 				final Socket client = server.accept();
-				if(client == null)
-				{
+				if (client == null) {
 					logWarning("client is null", null);
 					continue;
 				}
 				BufferedReader inFromClient =
 			               new BufferedReader(new InputStreamReader(client.getInputStream()));
 				String message = inFromClient.readLine();
-				if(message == null)
-				{
+				if (message == null) {
 					logWarning("message is null", null);
 					continue;
 				}
-				if (message.contains("<EOM>"))
-				{
+				if (message.contains("<EOM>")) {
 					message = message.replace("<EOM>", "");
 					String [] split = message.split("\\>\\>");
-					if(split[0].equals("moveCursor"))
-					{
-						display.asyncExec(new Runnable()
-						{
+					if (split[0].equals("moveCursor")) {
+						display.asyncExec(new Runnable() {
 							@Override
 							public void run() {
-								try
-								{
+								try {
 									File fileToOpen = new File(split[1]);
 
 									IFileStore fileStore = EFS.getLocalFileSystem().getStore(fileToOpen.toURI());
-									if(fileStore == null)
-									{
+									if (fileStore == null) {
 										throw new PartInitException("filestorage is null");
 									}
 
 									IWorkbenchPage page = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
-									if(page == null)
-									{
+									if (page == null) {
 										throw new PartInitException("page is null");
 									}
 
 									IEditorPart part = IDE.openEditorOnFileStore(page, fileStore);
-									if(part == null)
-									{
+									if(part == null) {
 										throw new PartInitException("part is null");
 									}
 									ITextEditor editor = (ITextEditor) part;
 
 									Object control = part.getAdapter(Control.class);
-									if(control == null)
-									{
+									if(control == null) {
 										throw new PartInitException("control is null");
 									}
 
@@ -162,47 +140,36 @@ public class TCPServerWorker extends Thread {
 									}
 
 								}
-								catch(PartInitException e)
-								{
+								catch(PartInitException e) {
 									logWarning("Failed to open file", e);
 								}
 							}
 						});
 
 					}
-					if ( split[0].equals("ping") )
-					{
+					if (split[0].equals("ping")) {
 						sendPing();
 					}
 				}
-				else
-				{
+				else {
 					logWarning("No EOM in the message", null);
 				}
 
 				client.close();
 			}
 		}
-		catch(final Exception e)
-		{
+		catch(final Exception e) {
 			logError("Tcp server crashed", e);
 		}
-		finally
-		{
-			if (server != null)
-			{
-				try
-				{
+		finally {
+			if (server != null) {
+				try {
 					server.close();
 				}
-				catch(IOException e)
-				{
+				catch(IOException e) {
 					logError("Could not close server", e);
 				}
 			}
-
 		}
 	}
-
-
 }
