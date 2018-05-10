@@ -38,6 +38,7 @@ public class TCPServerWorker extends Thread {
 	private void logError(String msg, Exception e) {
 		Activator.getDefault().getLog().log(new Status(IStatus.ERROR, Activator.PLUGIN_ID, Status.OK, msg, e));
 	}
+	
 	private void logWarning(String msg, Exception e ) {
 		Activator.getDefault().getLog().log(new Status(IStatus.WARNING, Activator.PLUGIN_ID, Status.OK, msg, e));
 	}
@@ -55,22 +56,17 @@ public class TCPServerWorker extends Thread {
 	        writer.flush();
 	        socket.close();
 		} catch (Exception e) {
-			String errorMsg = 
-					"No connection to a Sourcetrail instance\n\n Make sure Sourcetrail is running and the right address is used(" + ip + ":" + port + ")";
-			display.asyncExec(new Runnable() {
-				@Override
-				public void run() {
-					MessageDialog.openError(null, "SourcetrailPluginError", errorMsg);
-				}
-			});
-
-			e.printStackTrace();
+			logWarning(
+					"Unable to establish connection to Sourcetrail instance.\n\nMake sure Sourcetrail is running and the " + 
+					"right address is used (" + ip + ":" + port + ").",
+					e
+			);
 		}
 	}
 
-	public TCPServerWorker( Display display) {
+	public TCPServerWorker(Display display) {
 		if (display == null) {
-			System.out.println("display null");
+			logError("display null", null);
 		}
 		this.display = display;
 	}
@@ -138,14 +134,12 @@ public class TCPServerWorker extends Thread {
 										editor.selectAndReveal(offset, 1);
 										text.setCaretOffset(offset);
 									}
-
 								}
 								catch(PartInitException e) {
 									logWarning("Failed to open file", e);
 								}
 							}
 						});
-
 					}
 					if (split[0].equals("ping")) {
 						sendPing();
@@ -157,11 +151,9 @@ public class TCPServerWorker extends Thread {
 
 				client.close();
 			}
-		}
-		catch(final Exception e) {
+		} catch(final Exception e) {
 			logError("Tcp server crashed", e);
-		}
-		finally {
+		} finally {
 			if (server != null) {
 				try {
 					server.close();
